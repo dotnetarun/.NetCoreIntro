@@ -211,12 +211,14 @@ var setting = builder.Configuration["MySetting"];
 ## 7. Building a Simple API
 Create:
 ```bash
+bash
 
 dotnet new webapi -o MyApi
 cd MyApi
 ```
 Modify Program.cs:
 ```csharp
+csharp
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
@@ -226,44 +228,53 @@ app.Run();
 ```
 Run (dotnet run) and visit http://localhost:5000/api/hello.
 
-Add endpoint:
+Add a more complex endpoint:
+```csharp
 csharp
 
 app.MapGet("/api/users", () => new[] { new { Id = 1, Name = "Alice" }, new { Id = 2, Name = "Bob" } });
+```
+This returns a JSON array of users.
 
 ## 8. Deploying Your App
-Options
-Azure: Use App Service.
+Once your app is ready, you can deploy it to a server or cloud platform.
+**Options**:
+- **Azure**: Microsoft’s cloud platform. Use App Service for easy deployment.
 
-AWS: Elastic Beanstalk, ECS.
+- **AWS**: Deploy to Elastic Beanstalk or ECS.
 
-Docker: Containerize app.
+- **Docker**: Package your app in a container for portability.
 
-Local Server: Host with Kestrel.
+- **Local Server**: Host on a Linux/Windows server using Kestrel (the .NET web server).
 
-Basic Azure Deployment
-Install Azure CLI.
+Basic Deployment to Azure:
+- Install the Azure CLI: azure.microsoft.com.
 
-Publish:
-bash
+- Publish your app:
+  ```bash
+  bash
 
-dotnet publish -c Release
+  dotnet publish -c Release
+  ```
+- Deploy using Azure CLI:
+  ```bash
+  bash
 
-Deploy:
-bash
-
-az webapp up --name MyWebApp --resource-group MyGroup
+  az webapp up --name MyWebApp --resource-group MyGroup
+  ```
 
 ## 9. Best Practices
-Code Organization: Use MVC or clean architecture.
+**Code Organization**: Use MVC or clean architecture for large projects.
 
-Testing: Use xUnit or NUnit.
+**Testing**: Write unit tests using xUnit or NUnit.
 
-Security: Enable HTTPS, use authentication, validate input.
+**Security**: Enable HTTPS, use authentication (e.g., JWT), and validate user input.
 
-Logging: Use built-in logging or Serilog.
+**Logging**: Use built-in logging or tools like Serilog.
 
-Performance: Optimize queries, cache responses.
+**Performance**: Optimize database queries and cache responses.
+
+
 
 ## 10. Learning Path Forward
 To deepen your .NET Core knowledge:
