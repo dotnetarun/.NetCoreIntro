@@ -93,7 +93,7 @@ dotnet run
 
 Outputs Hello, World! if successful.
 
-5. Building Your First .NET Core Web Application
+## 5. Building Your First .NET Core Web Application
 Use ASP.NET Core for web development.
 Step 1: Create a Web App
 Run:
@@ -135,7 +135,7 @@ html
 
 Save and refresh the browser.
 
-6. Core Components of .NET Core
+## 6. Core Components of .NET Core
 a. ASP.NET Core
 Framework for web apps.
 
