@@ -128,11 +128,12 @@ appsettings.json: Configuration settings.
 
 Step 3: Modify the App
 Edit Pages/Index.cshtml:
+```html
 html
 
 <h1>Welcome to My .NET Core App!</h1>
 <p>This is my first web app.</p>
-
+```
 Save and refresh the browser.
 
 ## 6. Core Components of .NET Core
